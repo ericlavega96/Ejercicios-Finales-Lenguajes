@@ -22,7 +22,7 @@ public class ElBellacoLi {
                 System.out.println("El límite de enteros de la ecuación es 3");
             }
         }while (!exit);
-        
+
     }
 
 
