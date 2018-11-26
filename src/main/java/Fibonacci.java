@@ -7,7 +7,7 @@ public class Fibonacci {
         do{
             Scanner scanner = new Scanner(System.in);
             long n = 0;
-            System.out.println("Introduzca un número:");
+            System.out.println("Introduzca un número: ");
             try{
                 n = scanner.nextLong();
                 System.out.println("El fibonacci de " + n + " es: " + fibonnacciRecursivo(n));
