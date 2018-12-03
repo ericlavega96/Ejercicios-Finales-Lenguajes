@@ -1,3 +1,4 @@
+    console.time("Time : ") ;
     var a = prompt("Entre el primer #");
     var b = prompt("Segundo #");
     var c = prompt("Tercer  #");
@@ -88,5 +89,5 @@
     console.log("Caso : "+ b + " / " + c + " = " + a);
 
   }
-
+console.timeEnd("Time : ") ;
 
