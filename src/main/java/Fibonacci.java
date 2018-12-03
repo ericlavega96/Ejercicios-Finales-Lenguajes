@@ -21,7 +21,7 @@ public class Fibonacci {
 
     static long fibonnacciRecursivo(long n){
     if(n <= 1)
-        return 1;
+        return n;
     return (fibonnacciRecursivo(n - 1) + fibonnacciRecursivo(n - 2));
     }
 }

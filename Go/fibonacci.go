@@ -13,7 +13,7 @@ func main() {
     scanner.Scan()
 
     if n,error := strconv.Atoi(scanner.Text()); error == nil{
-      fmt.Println("El Fibonacci de " + strconv.Itoa(fib(n)))
+      fmt.Println("El Fibonacci de " + strconv.Itoa(n)+" es " + strconv.Itoa(fib(n)))
       exit = true
     }else{
       fmt.Println("Debe de insertar un número")
@@ -26,7 +26,7 @@ func main() {
 
 func fib(n int) int{
   if n <= 1{
-    return 1
+    return n
   }
   return fib(n - 1) + fib(n - 2)
 }
