@@ -4,14 +4,18 @@ import "fmt"
 import "bufio"
 import "strconv"
 import "os"
+import "time"
 
 func main() {
+
+  start := time.Now()
 
   scanner := bufio.NewScanner(os.Stdin)
   exit := false
   x := 0
   fmt.Println("Inserte la cantidad de sentencias ( 1 - 150 ):")
   scanner.Scan()
+  
   if n,error := strconv.Atoi(scanner.Text()); error == nil{
     if n >= 1 && n <= 150{
       for{
@@ -54,5 +58,6 @@ func main() {
   }else{
     fmt.Println("Por favor, introduzca un número")
   }
-
+elapsed:=time.Since(start)
+fmt.Printf("Time : %s \n",elapsed)
 }
