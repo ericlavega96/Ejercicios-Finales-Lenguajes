@@ -5,8 +5,11 @@ import "strings"
 import "bufio"
 import "strconv"
 import "os"
+import "time"
 
 func main(){
+
+start := time.Now()
 
 fmt.Println("Introduzca su ecuacion de 3 enteros")
 
@@ -95,5 +98,7 @@ scan := bufio.NewScanner(os.Stdin)
       
         fmt.Println("Caso : ",b," / ",c," = ",a)
     }
-  
+
+elapsed:=time.Since(start)
+fmt.Printf("Time : %s \n",elapsed)
 }
