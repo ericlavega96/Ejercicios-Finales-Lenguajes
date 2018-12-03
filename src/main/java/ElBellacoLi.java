@@ -10,13 +10,20 @@ public class ElBellacoLi {
         int numeroCaso = 0;
         do{
             numeroCaso++;
+            long startTime = System.nanoTime();
+
             Scanner scanner =  new Scanner(System.in);
             System.out.println("Introduzca su ecuación de tres enteros: ");
             linea = scanner.nextLine();
             if(linea.split("\\s").length == 3 ){
                 String[] ecuacion = linea.split("\\s");
                 int a = Integer.valueOf(ecuacion[0]), b = Integer.valueOf(ecuacion[1]), c = Integer.valueOf(ecuacion[2]);
+
+
                 System.out.println("Caso "+ numeroCaso + ": " + mostrarEcuacion(a,b,c));
+                long stopTime = System.nanoTime();
+                long elapsedTime = (stopTime - startTime)/1_000_000_000;
+                System.out.println("Time : " + elapsedTime + " seconds");
 
             }else{
                 System.out.println("El límite de enteros de la ecuación es 3");

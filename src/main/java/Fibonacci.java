@@ -9,9 +9,16 @@ public class Fibonacci {
             long n = 0;
             System.out.println("Introduzca un número: ");
             try{
+                long startTime = System.nanoTime();
+
                 n = scanner.nextLong();
                 System.out.println("El fibonacci de " + n + " es: " + fibonnacciRecursivo(n));
                 exit = true;
+
+                long stopTime = System.nanoTime();
+                long elapsedTime = (stopTime - startTime)/1_000_000_000;
+                System.out.println("Time : " + elapsedTime + " seconds");
+
             }catch (InputMismatchException ime){
                 System.out.println("Debe de introducir un número");
             }

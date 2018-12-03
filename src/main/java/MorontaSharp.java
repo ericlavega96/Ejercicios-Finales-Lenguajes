@@ -10,14 +10,22 @@ public class MorontaSharp {
             int n;
             int x = 0;
             String sentencia;
+            long startTime = System.nanoTime();
+
             Scanner scanner = new Scanner(System.in);
             System.out.println("Inserte la cantidad de sentencias ( 1 - 150 ): ");
             try {
                 n = scanner.nextInt();
                 if(n >= 1 && n <= 150){
                     do{
+
                         System.out.println("Inserte la sentencia " + n);
                         sentencia = scanner.next();
+
+                        long stopTime = System.nanoTime();
+                        long elapsedTime = (stopTime - startTime)/1_000_000_000;
+                        System.out.println("Time : " + elapsedTime + " seconds");
+
                         if(sentencia.length() == 3){
                             switch (sentencia){
                                 case "X++":
