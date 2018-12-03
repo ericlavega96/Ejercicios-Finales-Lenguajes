@@ -26,11 +26,6 @@ public class ElBellacoLi {
     }
 
 
-
-
-
-
-
      static String mostrarEcuacion(int a,int b,int c){
         String solucion = null;
         //Operaciones normales
@@ -46,9 +41,15 @@ public class ElBellacoLi {
         //Suma
         else if(c + b == a)
             solucion =  c +"+" + b + "=" + a;
+        else if(c + a == b)
+            solucion =  c +"+" + a + "=" + b;
         //Resta
+        else if(b - a == c)
+            solucion = b +"-" + a + "=" + c;
         else if(c - b == a)
             solucion = c +"-" + b + "=" + a;
+        else if(b - c == a)
+            solucion = b +"-" + c + "=" + a;
         else if(c - a == b)
             solucion = c +"-" + a + "=" + b;
         else if(a - c == b)
