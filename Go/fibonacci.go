@@ -4,8 +4,12 @@ import "fmt"
 import "bufio"
 import "strconv"
 import "os"
+import "time"
 
 func main() {
+
+  start := time.Now()
+
    exit := false
   for{
     scanner := bufio.NewScanner(os.Stdin)
@@ -22,6 +26,8 @@ func main() {
       break
     }
   }
+elapsed:=time.Since(start)
+fmt.Printf("Time : %s \n",elapsed)
 }
 
 func fib(n int) int{
