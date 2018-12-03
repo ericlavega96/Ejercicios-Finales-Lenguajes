@@ -1,3 +1,4 @@
+console.time("Time : ");
 var num = prompt("Inserte la cantidad de sentencias ( 1 - 150 ): ");
 var n = parseInt(num);
 var x = 0;
@@ -30,4 +31,5 @@ while (n >= 1 && n <= 150) {
 }
 
 console.log(x);
+console.timeEnd("Time : ");
   
